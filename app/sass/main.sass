@@ -1,0 +1,79 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+strong, b
+	font-family: RobotoBold, sans-serif
+h1, h2, h3, h4, h5, h6
+	font-family: RobotoCondensedBold, sans-serif
+	font-weight: normal
+.header
+	background-color: $main_color
+.header-nav
+	text-align: center
+	&__list
+		list-style-type: none
+	&__item
+		&:hover
+			background-color: lighten($main_color, 5%)
+	&__item:hover &__link
+		text-decoration: none
+		color: $accent_color
+	&__link
+		display: inline-block
+		padding: 35px 20px
+		color: $header-nav-link-color
+		text-decoration: none
+
+.button
+	font-family: RobotoCondensedBold, sans-serif
+	text-transform: uppercase
+	color: $button_text_color
+
+
+@import "media" // Всегда в конце
