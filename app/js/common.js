@@ -7,11 +7,15 @@ $(function() {
 
 document.addEventListener(
     "DOMContentLoaded", () => {
-        new Mmenu( "#my-menu", {
-            "extensions": [
-                "pagedim-black",
-            ]
-        });
+        // Fire the plugin
+        const menu = new Mmenu( "#my-menu" );
+
+        // Get the API
+        const api = menu.API;
+
+        // Invoke a method
+        const panel = document.querySelector( "#my-panel" );
+        api.openPanel( panel );
     }
 );
 
