@@ -9,7 +9,7 @@
     <meta name="description" content="">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width minimum-scale=1.0 maximum-scale=1.0 user-scalable=no"/>
 
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -29,44 +29,11 @@
 </head>
 
 <body>
-<div id="my-page">
-    <div id="my-menu">
-        <ul class="header-nav__list">
-            <li class="header-nav__item"><a href="#" class="header-nav__link">Главная</a></li>
-            <li class="header-nav__item header-nav__item_parent">
-                <a href="#" class="header-nav__link">О компании</a>
-                <ul class="header-nav__submenu header-submenu">
-                    <li class="header-submenu__item"><a href="#" class="header-submenu__link">Пункт
-                        подменю</a></li>
-                    <li class="header-submenu__item header-submenu__item_parent">
-                        <a href="#" class="header-submenu__link">пункт подменю 2</a>
-                        <ul class="header-submenu header-submenu__submenu">
-                            <li class="header-submenu__item"><a href="#" class="header-submenu__link">Пункт
-                                подменю</a></li>
-                            <li class="header-submenu__item"><a href="#" class="header-submenu__link">пункт
-                                подменю 2</a></li>
-                            <li class="header-submenu__item"><a href="#" class="header-submenu__link">подменю
-                                подменю vber</a></li>
-                            <li class="header-submenu__item"><a href="#" class="header-submenu__link">подменю
-                                ню ню</a></li>
-                        </ul>
-                    </li>
-                    <li class="header-submenu__item"><a href="#" class="header-submenu__link">подменю
-                        подменю vber</a></li>
-                    <li class="header-submenu__item"><a href="#" class="header-submenu__link">подменю ню
-                        ню</a></li>
-                </ul>
-            </li>
-            <li class="header-nav__item"><a href="#" class="header-nav__link">Услуги и стоимость</a></li>
-            <li class="header-nav__item"><a href="#" class="header-nav__link">Сертификаты</a></li>
-            <li class="header-nav__item"><a href="#" class="header-nav__link">Статьи</a></li>
-            <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
-        </ul>
-    </div>
+<div id="page">
     <header class="header">
         <div class="container">
             <div class="row justify-content-center">
-                <nav class="header-nav" >
+                <nav class="header-nav">
                     <ul class="header-nav__list d-flex">
                         <li class="header-nav__item"><a href="#" class="header-nav__link">Главная</a></li>
                         <li class="header-nav__item header-nav__item_parent">
@@ -98,6 +65,13 @@
                         <li class="header-nav__item"><a href="#" class="header-nav__link">Статьи</a></li>
                         <li class="header-nav__item"><a href="#" class="header-nav__link">Контакты</a></li>
                     </ul>
+                    <button class="hamburger hamburger--elastic" type="button" aria-label="Menu"
+                            aria-controls="navigation"
+                            aria-expanded="true/false">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -106,7 +80,7 @@
     <section></section>
     <section></section>
     <footer></footer>
-    <script src="js/scripts.min.js"></script>
-
-</div></body>
+</div>
+<script src="js/scripts.min.js"></script>
+</body>
 </html>

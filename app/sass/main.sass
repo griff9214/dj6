@@ -14,6 +14,8 @@
 		-webkit-box-sizing: border-box
 		-moz-box-sizing: border-box
 		box-sizing: border-box
+	&:active, &:focus
+		outline: none
 
 *::-webkit-input-placeholder
 	color: #666
@@ -49,6 +51,7 @@ body
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+	background-color: #fff
 
 strong, b
 	font-family: RobotoBold, sans-serif
@@ -107,6 +110,7 @@ h1, h2, h3, h4, h5, h6
 .header-submenu
 	@extend .header-nav
 	background-color: $main_color
+	list-style-type: none
 
 	&__submenu
 		visibility: hidden
@@ -115,8 +119,6 @@ h1, h2, h3, h4, h5, h6
 		left: 100%
 		top: 0
 		transition: visibility 0s, opacity .3s
-
-	list-style-type: none
 
 	&__item
 		@extend .header-nav__item
@@ -137,6 +139,7 @@ h1, h2, h3, h4, h5, h6
 		white-space: nowrap
 		width: 100%
 		padding: 10px 20px
+
 
 .button
 	font-family: RobotoCondensedBold, sans-serif
