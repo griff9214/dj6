@@ -6,7 +6,10 @@ $(function() {
     $("#my-menu").find("ul").removeClass();
 
     const menu = new Mmenu( "#my-menu",{
-        extensions : [ 'pagedim-black'],
+        extensions : [ 'pagedim-black', 'border-none'],
+        navbar: {
+            title: 'Меню'
+        },
     } );
     const api = menu.API;
     api.bind("close:start", function () {
