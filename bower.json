@@ -20,6 +20,7 @@
     "fontawesome": "^5.12.1",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "css-hamburgers": "^1.1.3"
+    "css-hamburgers": "^1.1.3",
+    "owl.carousel": "owl-carousel2#^2.3.4"
   }
 }
