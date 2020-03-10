@@ -279,12 +279,43 @@ h1, h2, h3, h4, h5, h6
 
 .slider-section
 	position: relative
-
 	&__top-panel
 		position: absolute
 		top: 0
 		width: 100%
 		z-index: 2
+.slider
+	position: relative
+	&__nav
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		margin-left: auto
+		margin-right: auto
+		min-height: 100%
+		color: $accent_color
+	&__arrow
+		position: absolute
+		top: 50%
+		z-index: 5
+		cursor: pointer
+		font-family: "Font Awesome 5 Free", sans-serif
+		font-weight: 600
+		text-rendering: auto
+		font-size: 2.5em
+		&:hover
+			color: lighten($accent_color, 10%)
+		&:active
+			color: darken($accent_color, 10%)
+		&-next
+			right: 0
+			&:before
+				content: '\f105'
+		&-prev
+			left: 0
+			&:before
+				content: '\f104'
 
 .slide
 	color: #ffffff
@@ -332,6 +363,20 @@ h1, h2, h3, h4, h5, h6
 		align-self: flex-start
 
 
+.owl-dots
+	position: absolute
+	width: 100%
+	bottom: 30px
+	text-align: center
+.owl-dot
+	display: inline-block
+	margin: 0 5px
+	width: .9em
+	height: .9em
+	border-radius: 50%
+	background-color: #000 !important
+	&.active
+		background-color: $accent_color !important
 
 .button
 	font-family: RobotoCondensedBold, sans-serif

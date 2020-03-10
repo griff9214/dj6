@@ -26,10 +26,12 @@ $(function() {
         event.preventDefault();
     });
 
-    $('.slider-wrapper').owlCarousel({
+    let owl = $('.slider__canvas').owlCarousel({
         loop:true,
         //margin:10,
-        nav:true,
+        nav:false,
+        dots:true,
+        autoHeight:true,
         responsive:{
             0:{
                 items:1
@@ -41,5 +43,11 @@ $(function() {
                 items:1
             }
         }
-    })
+    });
+    $('.slider__arrow-next').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
+    $('.slider__arrow-prev').click(function() {
+        owl.trigger('prev.owl.carousel', [300]);
+    });
 });
