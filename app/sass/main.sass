@@ -277,6 +277,7 @@ h1, h2, h3, h4, h5, h6
 	&__email-link
 		color: $top-panel_main-color
 
+//slider styles
 .slider-section
 	position: relative
 	&__top-panel
@@ -377,19 +378,87 @@ h1, h2, h3, h4, h5, h6
 	background-color: #000 !important
 	&.active
 		background-color: $accent_color !important
+
 .catalog-section
 	padding: 50px 0px
 .cat-item
 	display: flex
 	flex-direction: column
+	align-items: center
 	&__img-container
+		position: relative
+		display: block
 		min-height: 190px
-	&__img
+		background-position: center center
+		-webkit-background-size: cover
+		background-size: cover
+		height: 100%
 		width: 100%
+		&:before, &:after
+			position: absolute
+			opacity: 0
+			transition: opacity .3s ease
+		&:before
+			content: '\f06e'
+			display: block
+			position: absolute
+			left: 43%
+			top: 37%
+			font-family: "Font Awesome 5 Free", sans-serif
+			font-weight: 600
+			font-size: 1.6em
+			text-decoration: none
+			color: $accent_color
+		&:after
+			content: ''
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background-color: rgba($main_color, .3)
+		&:hover:after, &:hover:before
+			opacity: 100
+
 	&__title
-		align-self: center
+		text-transform: uppercase
+
 	&__more-button
-		align-self: center
+		//
+//EOF slider styles
+
+.stat-section
+	background-color: $main_color
+	color: $header-nav-link-color
+	padding: 30px 0
+.item
+	display: flex
+	flex-direction: row
+	align-items: center
+	&__star
+		position: relative
+		font-size: 4em
+		&:before
+			z-index: 0
+			display: block
+			content: "\f005"
+			font-family: "Font Awesome 5 Free", sans-serif
+			font-weight: 600
+			color: lighten($main_color, 30%)
+	&__num
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		text-align: center
+		z-index: 2
+		font-size: .4em
+		line-height: 405%
+		color: $accent_color
+	&__desc
+		padding-left: 20px
+		font-family: RobotoCondensedLight, sans-serif
+		opacity: .3
 .button
 	font-family: RobotoCondensedBold, sans-serif
 	text-transform: uppercase
