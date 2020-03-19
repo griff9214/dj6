@@ -280,13 +280,16 @@ h1, h2, h3, h4, h5, h6
 //slider styles
 .slider-section
 	position: relative
+
 	&__top-panel
 		position: absolute
 		top: 0
 		width: 100%
 		z-index: 2
+
 .slider
 	position: relative
+
 	&__nav
 		position: absolute
 		top: 0
@@ -296,6 +299,7 @@ h1, h2, h3, h4, h5, h6
 		margin-right: auto
 		min-height: 100%
 		color: $accent_color
+
 	&__arrow
 		position: absolute
 		top: 50%
@@ -305,16 +309,22 @@ h1, h2, h3, h4, h5, h6
 		font-weight: 600
 		text-rendering: auto
 		font-size: 2.5em
+
 		&:hover
 			color: lighten($accent_color, 10%)
+
 		&:active
 			color: darken($accent_color, 10%)
+
 		&-next
 			right: 0
+
 			&:before
 				content: '\f105'
+
 		&-prev
 			left: 0
+
 			&:before
 				content: '\f104'
 
@@ -347,6 +357,7 @@ h1, h2, h3, h4, h5, h6
 		margin-top: 0
 		line-height: 1.1875em
 		margin-bottom: 30px
+
 		&:first-line
 			color: $accent_color
 
@@ -369,6 +380,7 @@ h1, h2, h3, h4, h5, h6
 	width: 100%
 	bottom: 30px
 	text-align: center
+
 .owl-dot
 	display: inline-block
 	margin: 0 5px
@@ -376,15 +388,20 @@ h1, h2, h3, h4, h5, h6
 	height: .9em
 	border-radius: 50%
 	background-color: #000 !important
+
 	&.active
 		background-color: $accent_color !important
 
 .catalog-section
 	padding: 50px 0px
+
 .cat-item
 	display: flex
 	flex-direction: column
 	align-items: center
+	border: 3px solid $main_color
+	padding-bottom: 37px
+
 	&__img-container
 		position: relative
 		display: block
@@ -394,10 +411,12 @@ h1, h2, h3, h4, h5, h6
 		background-size: cover
 		height: 100%
 		width: 100%
+
 		&:before, &:after
 			position: absolute
 			opacity: 0
 			transition: opacity .3s ease
+
 		&:before
 			content: '\f06e'
 			display: block
@@ -409,6 +428,7 @@ h1, h2, h3, h4, h5, h6
 			font-size: 1.6em
 			text-decoration: none
 			color: $accent_color
+
 		&:after
 			content: ''
 			left: 0
@@ -416,27 +436,47 @@ h1, h2, h3, h4, h5, h6
 			top: 0
 			bottom: 0
 			background-color: rgba($main_color, .3)
+
 		&:hover:after, &:hover:before
 			opacity: 100
 
 	&__title
 		text-transform: uppercase
+		margin: 30px 0
+
+
+	&__price
+		font-size: 1.0625em
+		font-family: "RobotoBold", sans-serif
+		margin-bottom: 20px
+		span
+			font-size: 1.5em
+		&:before
+			content: '\f02c'
+			font-family: "Font Awesome 5 Free", sans-serif
+			font-weight: 600
+			font-size: .75em
+			color: $accent_color
+			display: inline-block
+			margin-right: 5px
 
 	&__more-button
-		//
 //EOF slider styles
 
 .stat-section
 	background-color: $main_color
 	color: $header-nav-link-color
 	padding: 30px 0
+
 .item
 	display: flex
 	flex-direction: row
 	align-items: center
+
 	&__star
 		position: relative
 		font-size: 4em
+
 		&:before
 			z-index: 0
 			display: block
@@ -444,6 +484,7 @@ h1, h2, h3, h4, h5, h6
 			font-family: "Font Awesome 5 Free", sans-serif
 			font-weight: 600
 			color: lighten($main_color, 30%)
+
 	&__num
 		position: absolute
 		left: 0
@@ -455,10 +496,12 @@ h1, h2, h3, h4, h5, h6
 		font-size: .4em
 		line-height: 405%
 		color: $accent_color
+
 	&__desc
 		padding-left: 20px
 		font-family: RobotoCondensedLight, sans-serif
 		opacity: .3
+
 .button
 	font-family: RobotoCondensedBold, sans-serif
 	text-transform: uppercase
