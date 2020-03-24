@@ -382,9 +382,14 @@ h1, h2, h3, h4, h5, h6
 .catalog-section
 	padding: 50px 0px
 .cat-item
+	background-color: #fff
 	display: flex
 	flex-direction: column
 	align-items: center
+	border: 3px solid $main_color
+	padding-bottom: 30px
+	transition: all .25s ease
+	box-sizing: border-box
 	&__img-container
 		position: relative
 		display: block
@@ -420,10 +425,29 @@ h1, h2, h3, h4, h5, h6
 			opacity: 100
 
 	&__title
+		font-family: "RobotoCondensedBold",sans-serif
+		font-size: 1.15em
 		text-transform: uppercase
+		margin: 15px 0px
+	&__price
+		margin-bottom: 20px
+		font-family: "RobotoBold", sans-serif
+		span
+			font-size: 1.25em
+		&:before
+			content: '\f02c'
+			display: inline-block
+			font-family: "Font Awesome 5 Free", sans-serif
+			font-weight: 600
+			color: $accent_color
+			margin-right: 10px
+			line-height: 1.25em
 
-	&__more-button
-		//
+	&:hover
+		z-index: 5
+		transform: scale(1.05)
+	&:hover + .cat-item
+		z-index: 0
 //EOF slider styles
 
 .stat-section
