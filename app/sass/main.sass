@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6
 	display: none
 
 .top-panel
-	background-color: rgba($main_color, .8)
+	background-color: rgba($main_color, .6)
 	padding: 50px 0
 	color: $top-panel_main-color
 
@@ -280,13 +280,16 @@ h1, h2, h3, h4, h5, h6
 //slider styles
 .slider-section
 	position: relative
+
 	&__top-panel
 		position: absolute
 		top: 0
 		width: 100%
 		z-index: 2
+
 .slider
 	position: relative
+
 	&__nav
 		position: absolute
 		top: 0
@@ -296,6 +299,7 @@ h1, h2, h3, h4, h5, h6
 		margin-right: auto
 		min-height: 100%
 		color: $accent_color
+
 	&__arrow
 		position: absolute
 		top: 50%
@@ -305,16 +309,22 @@ h1, h2, h3, h4, h5, h6
 		font-weight: 600
 		text-rendering: auto
 		font-size: 2.5em
+
 		&:hover
 			color: lighten($accent_color, 10%)
+
 		&:active
 			color: darken($accent_color, 10%)
+
 		&-next
 			right: 0
+
 			&:before
 				content: '\f105'
+
 		&-prev
 			left: 0
+
 			&:before
 				content: '\f104'
 
@@ -347,6 +357,7 @@ h1, h2, h3, h4, h5, h6
 		margin-top: 0
 		line-height: 1.1875em
 		margin-bottom: 30px
+
 		&:first-line
 			color: $accent_color
 
@@ -369,6 +380,7 @@ h1, h2, h3, h4, h5, h6
 	width: 100%
 	bottom: 30px
 	text-align: center
+
 .owl-dot
 	display: inline-block
 	margin: 0 5px
@@ -376,19 +388,65 @@ h1, h2, h3, h4, h5, h6
 	height: .9em
 	border-radius: 50%
 	background-color: #000 !important
+
 	&.active
 		background-color: $accent_color !important
+.section
+	padding: 70px 0
+	&__title
+		margin-bottom: 45px
+		font-size: 2.5em
+		line-height: 1.125em
+		text-transform: uppercase
+.stat-section
+	background-color: $main_color
+	color: $header-nav-link-color
+	padding: 30px 0
 
-.catalog-section
-	padding: 50px 0px
+.item
+	display: flex
+	flex-direction: row
+	align-items: center
+	height: 100%
+
+	&__star
+		position: relative
+		font-size: 4em
+
+		&:before
+			z-index: 0
+			display: block
+			content: "\f005"
+			font-family: "Font Awesome 5 Free", sans-serif
+			font-weight: 600
+			color: lighten($main_color, 30%)
+
+	&__num
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		text-align: center
+		z-index: 2
+		font-size: .4em
+		line-height: 405%
+		color: $accent_color
+
+	&__desc
+		padding-left: 20px
+		font-family: RobotoCondensedLight, sans-serif
+		opacity: .3
+
 .cat-item
 	display: flex
 	flex-direction: column
 	align-items: center
+	background-color: #fff
 	border: 3px solid $main_color
 	padding-bottom: 30px
 	transition: all .25s ease
-	box-sizing: border-box
+
 	&__img-container
 		position: relative
 		display: block
@@ -398,10 +456,12 @@ h1, h2, h3, h4, h5, h6
 		background-size: cover
 		height: 100%
 		width: 100%
+
 		&:before, &:after
 			position: absolute
 			opacity: 0
 			transition: opacity .3s ease
+
 		&:before
 			content: '\f06e'
 			display: block
@@ -413,6 +473,7 @@ h1, h2, h3, h4, h5, h6
 			font-size: 1.6em
 			text-decoration: none
 			color: $accent_color
+
 		&:after
 			content: ''
 			left: 0
@@ -420,19 +481,23 @@ h1, h2, h3, h4, h5, h6
 			top: 0
 			bottom: 0
 			background-color: rgba($main_color, .3)
+
 		&:hover:after, &:hover:before
 			opacity: 100
 
 	&__title
-		font-family: "RobotoCondensedBold",sans-serif
+		font-family: "RobotoCondensedBold", sans-serif
 		font-size: 1.15em
 		text-transform: uppercase
 		margin: 15px 0px
+
 	&__price
 		margin-bottom: 20px
 		font-family: "RobotoBold", sans-serif
+
 		span
 			font-size: 1.25em
+
 		&:before
 			content: '\f02c'
 			display: inline-block
@@ -445,46 +510,130 @@ h1, h2, h3, h4, h5, h6
 	&:hover
 		z-index: 5
 		transform: scale(1.05)
+		border-color: $accent_color
+		box-shadow: #0a0f13 0 0 10px 2px
+
 	&:hover + .cat-item
 		z-index: 0
-//EOF slider styles
 
-.stat-section
-	background-color: $main_color
-	color: $header-nav-link-color
-	padding: 30px 0
-.item
+
+.news-section
+	background-image: url(../img/news-bg.jpg)
+	background-size: cover
+	position: relative
+
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background-color: $main_color
+		opacity: .6
+	&__title
+		color: #fff
+
+.news-item
 	display: flex
-	flex-direction: row
+	flex-direction: column
 	align-items: center
-	&__star
+	border: 1px solid $main_color
+	padding-bottom: 30px
+	background-color: #fff
+	transition: all .25s ease
+
+	&__img-container
 		position: relative
-		font-size: 4em
+		display: block
+		min-height: 190px
+		background-position: center center
+		-webkit-background-size: cover
+		background-size: cover
+		height: 100%
+		width: 100%
+
+		&:before, &:after
+			position: absolute
+			opacity: 0
+			transition: opacity .3s ease
+
 		&:before
-			z-index: 0
+			content: '\f06e'
 			display: block
-			content: "\f005"
+			position: absolute
+			left: 43%
+			top: 37%
 			font-family: "Font Awesome 5 Free", sans-serif
 			font-weight: 600
-			color: lighten($main_color, 30%)
-	&__num
-		position: absolute
-		left: 0
-		right: 0
-		top: 0
-		bottom: 0
+			font-size: 1.6em
+			text-decoration: none
+			color: $accent_color
+
+		&:after
+			content: ''
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			background-color: rgba($main_color, .3)
+
+		&:hover:after, &:hover:before
+			opacity: 100
+
+	&__title
+		font-family: "RobotoCondensedBold", sans-serif
+		font-size: 1.15em
 		text-align: center
-		z-index: 2
-		font-size: .4em
-		line-height: 405%
-		color: $accent_color
-	&__desc
-		padding-left: 20px
-		font-family: RobotoCondensedLight, sans-serif
-		opacity: .3
+		text-transform: uppercase
+		margin: 15px 0
+
+	&__text
+		padding: 0 10px
+
+	&__more-button
+		margin-top: 20px
+
+	&:hover
+		z-index: 5
+		border-color: $accent_color
+
+	&:hover + .cat-item
+		z-index: 0
+
+
+.links-section
+	background-color: #EFEFEF
+.link-item
+	display: flex
+	flex-direction: row
+	border: 3px solid $accent_color
+	padding: 5px 10px
+	align-items: center
+	margin-bottom: 20px
+	background-color: #fff
+	&:hover
+		text-decoration: none
+
+	&__img-container
+		flex-basis: 30%
+		margin-right: 10px
+	&__img
+		display: block
+		max-width: 60%
+		margin-left: auto
+		margin-right: auto
+	&__text
+		flex-basis: 70%
+		color: #000
+		font-family: RobotoCondensedBold, sans-serif
+		text-transform: uppercase
+		line-height: 1.2em
+
 .button
 	font-family: RobotoCondensedBold, sans-serif
 	text-transform: uppercase
+	text-decoration: none
 	color: $button_text_color
 	background-color: $accent_color
 	border: none
@@ -492,9 +641,13 @@ h1, h2, h3, h4, h5, h6
 	font-size: .9em
 	padding: 10px 35px
 	cursor: pointer
+	display: block
+	width: fit-content
+
 
 	&:hover
 		background-color: lighten($accent_color, 10%)
+		text-decoration: none
 
 	&:active
 		background-color: darken($accent_color, 10%)
