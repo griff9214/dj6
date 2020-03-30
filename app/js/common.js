@@ -50,4 +50,12 @@ $(function() {
     $('.slider__arrow-prev').click(function() {
         owl.trigger('prev.owl.carousel', [300]);
     });
+
+    $(".owl-item.active").find(".slide").addClass("active");
+    owl.on('translated.owl.carousel', function(event) {
+        $(".owl-item").not(".active").find(".slide").removeClass("active");
+        $(".owl-item.active").find(".slide").addClass("active");
+        console.log("drag");
+    });
+
 });
